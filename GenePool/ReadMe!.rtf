@@ -1,0 +1,62 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+{\info
+{\title GenePool}
+{\doccomm ReadMe File}
+{\author Brad Martin}}\margl1440\margr1440\vieww12560\viewh14580\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 RSM 521 Final Project\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+GenePool\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 I. File List\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+	Combinations.java		Mutate.java		Organism.java\
+	Tree.java				Display.java		Prompt.java\
+	Combinations.class		Mutate.class		Organism.class\
+	Tree.class			Display.class		Prompt.class\
+	cracks.png			spiral.png		whispy.png\
+	zebra.png\
+	\
+II. How To Run \'93GenePool\'94\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+	Import folder into Eclipse. \
+	Set up windows so that you have a large, horizontal console.\
+	Run Prompt.java for the full effect. Follow the on-screen directions. \
+Note: when D class genes are entered, .png files have to be loaded, so it may take a while until the image is displayed.\
+\
+III. Origins of the Project\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+	A mutation can be either a flip or invert. It starts with this code:\
+\
+	 1 2 3 4\
+	 A B C D	where A + C is like 1 + 3 and 1 + 4 = the remainder after dividing by 4\
+\
+	Starting with 4 random combinations:	     A3 B4 D1 C2\
+	We can either flip or invert first:    flip: C2 D1 B4 A3\
+							 	     sum:	D1 B1 B1 D1\
+						            invert:	B1 D1 D1 B1\
+							          sum:	B2 B2 B2 B2 											and B2 is the solved gene\
+\
+	Sometimes, the gene solves on the first try:	C3 B1 A4 D2     \
+							         flip:	D2 A4 B1 C3\
+								     sum: C1 C1 C1 C1											and C1* is the solved gene\
+	\
+	So, I thought, what if a 1-solve gene acted like a \'93dominant\'94 gene. The grandparents are given 4 sets of 4 genes which are then solved for, sometimes giving 1-solve genes to the grandparents. The parents are then given any 1-solve genes as then randomly given genes from the grandparents. The children work in the same way.\
+\
+IV. Design Decisions & Project Issues\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+	This project uses a ton of for loops where case switch should have been used. 	Some methods could have been defined and called with different parameters instead of copying the same method four times.\
+	I used JFrame due to its ease of implementation. Mason did not seem necessary.\
+	The largest issue is the incorporation of asterisks with formatting. I ignored them. So when the program generates grandparents with a lot of 1-solve genes, the formatting tends to get screwed up. For the most part, it works, so I didn\'92t bother fixing this as it did not seem worth the time. \
+	I tried to give a brief explanation of each class file in the header, so I won\'92t delve into it here.\
+	While 1-solve genes cannot be given more than once, non 1-solve genes can. I did not fix this as I would have to then treat each gene as a separate entity and my jumbles of arrays would no longer be sufficient. I really didn\'92t want to get into that.\
+	I thought about having a \'93Continue?\'94 type of line at the end that would repeat the input and display. Then I figured it\'92s more fun to just get an entirely new tree. Also, if you can decipher Display.java and figure out the code, you can just input whatever you want to see anyway.\
+\
+V. Conclusion\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+	This was a really cool class, and although I don\'92t really understand how to use Mason, I learned a lot about program structure and it took my capabilities to the next level. I know it\'92s messy, but I am proud of this project. }
